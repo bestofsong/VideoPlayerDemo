@@ -7,23 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "ZKVideoView.h"
+
+NSString *TEST_VIDEO = @"http://media6.smartstudy.com/29/47/97142/2/dest.m3u8";
 
 @interface ViewController ()
-
+@property (strong, nonatomic) ZKVideoView *video;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+  self.video = [[ZKVideoView alloc] initWithFullscreenOnly:NO];
+  self.video.frame = CGRectMake(34, 148, 320, 180);
+  self.video.containerVC = self;
+  self.video.source = TEST_VIDEO;
+  self.video.playerState = PlayerStatePaused;
+  [self.view addSubview:self.video];
 }
-
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
-}
-
 
 @end

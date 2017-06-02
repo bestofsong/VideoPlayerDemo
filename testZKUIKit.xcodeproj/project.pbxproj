@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A49406AD76EC7E03074DF5ED /* libPods-testZKUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC513B1756F3980BAF9B4CE /* libPods-testZKUIKit.a */; };
 		F7FF6C5F1EE1BA1900FD6555 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FF6C5E1EE1BA1900FD6555 /* main.m */; };
 		F7FF6C621EE1BA1900FD6555 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FF6C611EE1BA1900FD6555 /* AppDelegate.m */; };
 		F7FF6C651EE1BA1900FD6555 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FF6C641EE1BA1900FD6555 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12FEFA371E7CC76F981DFE90 /* Pods-testZKUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testZKUIKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-testZKUIKit/Pods-testZKUIKit.release.xcconfig"; sourceTree = "<group>"; };
+		7C1BCDA2DD518643E50AA6F8 /* Pods-testZKUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testZKUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testZKUIKit/Pods-testZKUIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		7FC513B1756F3980BAF9B4CE /* libPods-testZKUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testZKUIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FF6C5A1EE1BA1900FD6555 /* testZKUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testZKUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FF6C5E1EE1BA1900FD6555 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7FF6C601EE1BA1900FD6555 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49406AD76EC7E03074DF5ED /* libPods-testZKUIKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CC93992A6CB7F58F3D76536 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FC513B1756F3980BAF9B4CE /* libPods-testZKUIKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEAA7FC8A2463B89A2EA5AF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C1BCDA2DD518643E50AA6F8 /* Pods-testZKUIKit.debug.xcconfig */,
+				12FEFA371E7CC76F981DFE90 /* Pods-testZKUIKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F7FF6C511EE1BA1900FD6555 = {
 			isa = PBXGroup;
 			children = (
 				F7FF6C5C1EE1BA1900FD6555 /* testZKUIKit */,
 				F7FF6C5B1EE1BA1900FD6555 /* Products */,
+				EEAA7FC8A2463B89A2EA5AF9 /* Pods */,
+				6CC93992A6CB7F58F3D76536 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7FF6C711EE1BA1A00FD6555 /* Build configuration list for PBXNativeTarget "testZKUIKit" */;
 			buildPhases = (
+				CF7A113B9CA90138632446DC /* [CP] Check Pods Manifest.lock */,
 				F7FF6C561EE1BA1900FD6555 /* Sources */,
 				F7FF6C571EE1BA1900FD6555 /* Frameworks */,
 				F7FF6C581EE1BA1900FD6555 /* Resources */,
+				382198B48525304F5A82E41F /* [CP] Embed Pods Frameworks */,
+				F3F476FF93A3BEA60F0AE746 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		382198B48525304F5A82E41F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testZKUIKit/Pods-testZKUIKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF7A113B9CA90138632446DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3F476FF93A3BEA60F0AE746 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testZKUIKit/Pods-testZKUIKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F7FF6C561EE1BA1900FD6555 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		F7FF6C721EE1BA1A00FD6555 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1BCDA2DD518643E50AA6F8 /* Pods-testZKUIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M863E7K5E6;
@@ -283,6 +359,7 @@
 		};
 		F7FF6C731EE1BA1A00FD6555 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12FEFA371E7CC76F981DFE90 /* Pods-testZKUIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M863E7K5E6;
